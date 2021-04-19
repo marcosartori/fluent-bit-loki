@@ -3,9 +3,9 @@ entries:
   fluent-bit:
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-04-19T19:31:43.876263315+01:00"
+    created: "2021-04-19T20:05:45.317605995+01:00"
     description: Uses fluent-bit Loki go plugin for gathering logs and sending them to Loki
-    digest: de16eddf54bab875c5148b99f4dd651fe6f496f9a291071b99fbf287479afc48
+    digest: 2a06aaabd88be7679b020897e64c7c5f3919835281658a4f723c9880691da2c0
     home: https://grafana.com/loki
     icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
     kubeVersion: ^1.10.0-0
@@ -16,6 +16,6 @@ entries:
     sources:
     - https://github.com/grafana/loki
     urls:
-    - https://marcosartori.github.io/fluent-bit-loki/.cr-release-packages/fluent-bit-2.2.1.tgz
+    - https://marcosartori.github.io/fluent-bit-loki/fluent-bit-2.2.1.tgz
     version: 2.2.1
-generated: "2021-04-19T19:31:43.875385617+01:00"
+generated: "2021-04-19T20:05:45.316265767+01:00"
