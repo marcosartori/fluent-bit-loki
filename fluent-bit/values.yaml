@@ -15,7 +15,7 @@ config:
     segmentSize: 500
   storage:
     filesystem:
-      enabled: true
+      enabled: false
       path: /tmp/fluent-bit-buffer
       sync: normal
       checksum: Off
