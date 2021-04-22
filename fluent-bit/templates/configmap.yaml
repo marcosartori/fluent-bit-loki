@@ -20,6 +20,7 @@ data:
         Parsers_File   parsers.conf
         {{- if .Values.config.storage.filesystem.enabled }}
         storage.path   {{ .Values.config.storage.filesystem.path }}
+        storage.backlog.mem_limit  {{ .Values.config.storage.backlog_mem_limit }}
         {{- end }}
     [INPUT]
         Name           tail
