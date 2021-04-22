@@ -22,6 +22,7 @@ config:
       max_chunks_up: 128
       backlog.mem_limit: 5M
       metrics: off
+      total_limit_size: 50M
   port: 2020
   tenantID: '""'
   batchWait: 1

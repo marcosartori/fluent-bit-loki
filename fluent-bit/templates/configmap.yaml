@@ -64,6 +64,10 @@ data:
         LabelMapPath /fluent-bit/etc/labelmap.json
         LineFormat {{ .Values.config.lineFormat }}
         LogLevel {{ .Values.config.loglevel }}
+        {{- if .Values.config.storage.filesystem.enabled }}
+        storage.total_limit_size  {{ .Values.config.storage.total_limit_size }}
+        {{- end }}
+
     {{- range $extraOutput := .Values.config.extraOutputs }}
     [OUTPUT]
     {{- range $key,$value := $extraOutput }}
