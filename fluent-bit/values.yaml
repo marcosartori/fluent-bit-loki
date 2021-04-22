@@ -13,6 +13,15 @@ config:
     dir: /tmp/flb-storage/buffer
     name: loki.0
     segmentSize: 500
+  storage:
+    filesystem:
+      enabled: true
+      path: /tmp/fluent-bit-buffer
+      sync: normal
+      checksum: Off
+      max_chunks_up: 128
+      backlog.mem_limit: 5M
+      metrics: off
   port: 2020
   tenantID: '""'
   batchWait: 1

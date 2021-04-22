@@ -18,6 +18,9 @@ data:
         Daemon         Off
         Log_Level      {{ .Values.config.loglevel }}
         Parsers_File   parsers.conf
+        {{- if .Values.config.storage.filesystem.enabled }}
+        storage.path   {{ .Values.config.storage.filesystem.path }}
+        {{- end }}
     [INPUT]
         Name           tail
         Tag            kube.*
@@ -25,6 +28,11 @@ data:
         Parser         docker
         DB             /run/fluent-bit/flb_kube.db
         Mem_Buf_Limit  {{ .Values.config.memBufLimit }}
+        {{- if .Values.config.storage.filesystem.enabled }}
+        storage.type   filesystem
+        {{- end }}
+
+
     [FILTER]
         Name           kubernetes
         Match          kube.*
