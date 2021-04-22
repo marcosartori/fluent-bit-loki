@@ -20,7 +20,7 @@ data:
         Parsers_File   parsers.conf
         {{- if .Values.config.storage.filesystem.enabled }}
         storage.path   {{ .Values.config.storage.filesystem.path }}
-        storage.backlog.mem_limit  {{ .Values.config.storage.backlog_mem_limit }}
+        storage.backlog.mem_limit  {{ .Values.config.storage.filesystem.backlog_mem_limit }}
         {{- end }}
     [INPUT]
         Name           tail
@@ -66,7 +66,7 @@ data:
         LineFormat {{ .Values.config.lineFormat }}
         LogLevel {{ .Values.config.loglevel }}
         {{- if .Values.config.storage.filesystem.enabled }}
-        storage.total_limit_size  {{ .Values.config.storage.total_limit_size }}
+        storage.total_limit_size  {{ .Values.config.storage.filesystem.total_limit_size }}
         {{- end }}
 
     {{- range $extraOutput := .Values.config.extraOutputs }}
