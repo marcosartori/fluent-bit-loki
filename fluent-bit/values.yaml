@@ -20,7 +20,7 @@ config:
       sync: normal
       checksum: Off
       max_chunks_up: 128
-      backlog.mem_limit: 5M
+      backlog_mem_limit: 5M
       metrics: off
       total_limit_size: 50M
   port: 2020
