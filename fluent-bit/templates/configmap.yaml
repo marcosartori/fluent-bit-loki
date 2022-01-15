@@ -23,14 +23,15 @@ data:
         storage.backlog.mem_limit {{ .Values.config.storage.filesystem.backlog_mem_limit }}
         {{- end }}
     [INPUT]
-        Name           tail
-        Tag            kube.*
-        Path           /var/log/containers/*.log
-        Parser         docker
-        DB             /run/fluent-bit/flb_kube.db
-        Mem_Buf_Limit  {{ .Values.config.memBufLimit }}
+        Name             tail
+        Tag              kube.*
+        Path             /var/log/containers/*.log
+        Parser           docker
+        DB               /run/fluent-bit/flb_kube.db
+        Refresh_Interval {{ .Values.config.refreshInterval }}
+        Mem_Buf_Limit    {{ .Values.config.memBufLimit }}
         {{- if .Values.config.storage.filesystem.enabled }}
-        storage.type   filesystem
+        storage.type     filesystem
         {{- end }}
 
 
