@@ -34,6 +34,7 @@ config:
   k8sLoggingParser: "Off"
   memBufLimit: "5MB"
   refreshInterval: "30"
+  readFromHead: "true"
   removeKeys:
     - kubernetes
     - stream
