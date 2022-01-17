@@ -2,9 +2,28 @@ apiVersion: v1
 entries:
   fluent-bit:
   - apiVersion: v1
+    appVersion: v2.4.2-amd64
+    created: "2022-01-17T11:35:12.461864477Z"
+    description: Uses fluent-bit Loki go plugin for gathering logs and sending them
+      to Loki
+    digest: e54ed2119dab5c6cff48c7cb9580705a4e79205df1696f81d8556561c165f8ab
+    home: https://grafana.com/loki
+    icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
+    kubeVersion: ^1.10.0-0
+    maintainers:
+    - email: lokiproject@googlegroups.com
+      name: Loki Maintainers
+    name: fluent-bit
+    sources:
+    - https://github.com/grafana/loki
+    urls:
+    - https://marcosartori.github.io/fluent-bit-loki/fluent-bit-2.2.3.tgz
+    version: 2.2.3
+  - apiVersion: v1
     appVersion: v2.1.2
-    created: "2021-10-28T16:56:18.899375274+01:00"
-    description: Uses fluent-bit Loki go plugin for gathering logs and sending them to Loki
+    created: "2022-01-17T11:35:12.460659378Z"
+    description: Uses fluent-bit Loki go plugin for gathering logs and sending them
+      to Loki
     digest: 1798ed273ebfbd3ea2cf567aaa37dd046512cc4522fcd573b2b779033557bf38
     home: https://grafana.com/loki
     icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
@@ -20,8 +39,9 @@ entries:
     version: 2.2.2
   - apiVersion: v1
     appVersion: v2.1.0
-    created: "2021-10-28T16:56:18.898541475+01:00"
-    description: Uses fluent-bit Loki go plugin for gathering logs and sending them to Loki
+    created: "2022-01-17T11:35:12.459503639Z"
+    description: Uses fluent-bit Loki go plugin for gathering logs and sending them
+      to Loki
     digest: d09eb371e049188abf2c7628034f001cde54c054cf6b8e4effaaac016b054370
     home: https://grafana.com/loki
     icon: https://raw.githubusercontent.com/grafana/loki/master/docs/sources/logo.png
@@ -35,4 +55,4 @@ entries:
     urls:
     - https://marcosartori.github.io/fluent-bit-loki/fluent-bit-2.2.1.tgz
     version: 2.2.1
-generated: "2021-10-28T16:56:18.897652326+01:00"
+generated: "2022-01-17T11:35:12.458175499Z"
