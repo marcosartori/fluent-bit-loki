@@ -31,6 +31,7 @@ data:
         Refresh_Interval {{ .Values.config.refreshInterval }}
         Read_from_Head   {{ .Values.config.readFromHead }}
         Mem_Buf_Limit    {{ .Values.config.memBufLimit }}
+        Rotate_Wait      {{ .Values.config.rotateWait }}
         {{- if .Values.config.storage.filesystem.enabled }}
         storage.type     filesystem
         {{- end }}

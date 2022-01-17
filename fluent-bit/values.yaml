@@ -35,6 +35,7 @@ config:
   memBufLimit: "5MB"
   refreshInterval: "30"
   readFromHead: "true"
+  rotateWait: 60
   removeKeys:
     - kubernetes
     - stream
